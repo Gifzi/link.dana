@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Tag Meta Open Graph untuk Pratinjau WhatsApp -->
-    <!-- GANTI KONTEN DI BAWAH INI SESUAI KEINGINAN ANDA -->
+    <!-- GANTI KONTEN DI BAWAH INI UNTUK MENGATUR PRATINJAU ANDA -->
     <meta property="og:title" content="DANA - Dompet Digital Indonesia">
     <meta property="og:description" content="Dana adalah bentuk baru uang
 tunai yang lebih baik. Transaksi
@@ -13,18 +13,18 @@ apapun, berapapun dan dimanapun
 jadi mudah bersama DANA.
 Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang">
     <meta property="og:image" content="https://a.m.dana.id/resource/imgs/skywalker/deeplinkpreview/deeplink-cover-portrait.png">
-    <meta property="og:url" content="https://media.npr.org/assets/img/2015/09/23/ap_836720500193_wide-1be0cfc508ffc714e17caf318ec5103ae1e6d2f4.jpg">
+    <meta property="og:url" content="https://a.m.dana.id/resource/imgs/skywalker/deeplinkpreview/deeplink-cover-portrait.png">
     <meta property="og:type" content="website">
 
-    <title>Situs Web Pratinjau Lucu</title>
+    <title>Klaim Hadiah Anda</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background: linear-gradient(135deg, #128c7e, #25d366);
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,28 +33,64 @@ Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang">
             text-align: center;
         }
         .container {
-            background-color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
             border-radius: 1.5rem;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             width: 100%;
             padding: 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            animation: fadeIn 1.5s ease-out;
         }
-        .image-placeholder {
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .main-image {
             width: 100%;
             height: auto;
             border-radius: 1rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: bounceIn 1s ease-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .action-button {
+            background-color: #ffffff;
+            color: #128c7e;
+            font-weight: 800;
+            padding: 1rem 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+        .action-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-4xl font-extrabold mb-4 text-gray-900 leading-tight">Selamat Datang!</h1>
-        <p class="text-lg text-gray-700 mb-6">Kamu menemukan situs web rahasia. [attachment_0](attachment)</p>
-        <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=GAMBAR+RAHASIA" alt="Placeholder Image" class="image-placeholder">
-        <p class="text-sm text-gray-500 mt-6">Bagikan tautan ini ke temanmu dan lihat pratinjaunya!</p>
+        <h1 class="text-4xl font-extrabold mb-4 leading-tight">Selamat! Kamu Berhasil!</h1>
+        <p class="text-lg mb-6">Hadiahmu sudah siap untuk diklaim. Cek pesan masukmu untuk petunjuk selanjutnya!</p>
+        <img src="https://placehold.co/600x400/25d366/ffffff?text=HADIAH+SUDAH+SIAP" alt="Gambar Hadiah" class="main-image">
+        <p class="text-sm mt-6">Tautan ini hanya bisa digunakan sekali. Bagikan ke temanmu agar mereka juga bisa mendapatkannya!</p>
     </div>
+    <script>
+        // Catatan: Skrip ini tidak memengaruhi pratinjau WhatsApp
+        // karena bot WhatsApp tidak menjalankan JavaScript.
+        // Skrip ini hanya berfungsi untuk menampilkan URL yang benar
+        // di halaman itu sendiri saat dibuka.
+        const currentUrl = window.location.href;
+        document.querySelector('meta[property="og:url"]').setAttribute('content', currentUrl);
+    </script>
 </body>
 </html>
